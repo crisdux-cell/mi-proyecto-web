@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquipPro Rental | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">EQUIP<span>PRO</span></div>
+</nav>
+
+<main id="content-container">
+    <section id="inicio" class="tab-content active">
+        <div class="hero">
+            <h1>Gestión Eficiente de Maquinaria</h1>
+            <p>Plataforma centralizada para control de inventario y reservas.</p>
+            <button class="add-btn" onclick="switchTab('reserva')">Ver Catálogo</button>
+        </div>
+        <div class="info-grid">
+            <div class="info-box"><h3>342</h3><p>Proyectos Activos</p></div>
+            <div class="info-box"><h3>$12,400</h3><p>Ingresos Mensuales</p></div>
+            <div class="info-box"><h3>98%</h3><p>Disponibilidad</p></div>
+        </div>
+    </section>
+
+    <section id="reserva" class="tab-content">
+        <div class="filter-bar">
+            <button class="filter-btn" onclick="filterTools('all')">Todos</button>
+            <button class="filter-btn" onclick="filterTools('Construcción')">Construcción</button>
+            <button class="filter-btn" onclick="filterTools('Jardinería')">Jardinería</button>
+        </div>
+        <div id="tools-list" class="tools-grid"></div>
+        <aside class="cart-glass">
+            <h3>Tu Reserva</h3>
+            <ul id="cart-items"></ul>
+            <div class="total-box">Total: $<span id="total">0</span></div>
+        </aside>
+    </section>
+
+    <section id="dashboard" class="tab-content">
+        <h2>Reportes de Sistema</h2>
+        <div class="stats-dashboard">
+            <div class="stat-main">
+                <h3>Resumen de Actividad</h3>
+                <div id="activity-logs">
+                    <p>✓ Taladro enviado a Zona Industrial</p>
+                    <p>✓ Planta 5kW reservada por cliente #402</p>
+                    <p>✓ Compresor regresó de mantenimiento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/events.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

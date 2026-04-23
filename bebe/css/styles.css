@@ -1,0 +1,33 @@
+:root { --bg: #0a0a0a; --card: #161616; --accent: #38bdf8; --text: #ffffff; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; min-height: 100vh; }
+
+.navbar { padding: 2rem; display: flex; justify-content: center; border-bottom: 1px solid #333; }
+.logo { font-weight: 800; font-size: 2rem; letter-spacing: -2px; }
+.logo span { color: var(--accent); }
+
+.hero { padding: 4rem 2rem; text-align: center; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 2rem; }
+.info-box { background: var(--card); padding: 2rem; border-radius: 15px; border: 1px solid #333; text-align: center; }
+.info-box h3 { font-size: 2rem; color: var(--accent); margin: 0; }
+
+.filter-bar { display: flex; gap: 10px; justify-content: center; margin: 2rem; }
+.filter-btn { background: #222; border: 1px solid #444; color: white; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+.filter-btn:hover { background: var(--accent); color: #000; }
+
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 2rem; }
+.tool-card { background: var(--card); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent); transition: 0.3s; }
+
+.add-btn { background: linear-gradient(135deg, var(--accent), #0284c7); color: #000; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3); }
+.add-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5); }
+
+.days-input { background: #000; border: 1px solid #333; color: white; padding: 10px; border-radius: 6px; width: 60px; text-align: center; margin-right: 10px; }
+.days-input::-webkit-outer-spin-button, .days-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.cart-glass { background: #161616; padding: 1.5rem; margin: 2rem; border-radius: 10px; border: 1px solid #333; }
+.stats-dashboard { background: var(--card); padding: 2rem; border-radius: 10px; margin: 2rem; border: 1px solid #333; }
